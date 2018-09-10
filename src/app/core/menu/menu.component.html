@@ -1,4 +1,36 @@
-<div *ngIf="state === 'show'; else hide">
+<div class="navigation">
+    <i *ngIf="state === 'show'; else hide"
+    (click)="toggleState()"
+    class="menu fa fa-bars fa-lg"
+  ></i>
+  <ng-template #hide>
+    <i
+      (click)="toggleState()"
+      class="menu fa fa-times fa-lg"
+    ></i>
+  </ng-template>
+
+  <div
+    [@state]="state"
+    class="list"
+  >
+    <ul>
+      <li>
+        <img src="../../../assets/rat.png">
+      </li>
+
+      <li>
+        <img src="../../../assets/scale.png">
+      </li>
+
+      <li>
+        <img src="../../../assets/measurement.png">
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- <div *ngIf="state === 'show'; else hide">
   <i
     [@state]="state"
     (click)="toggleState()"
@@ -32,4 +64,4 @@
     </ul>
   </div>
   </div>
-</ng-template>
+</ng-template> -->

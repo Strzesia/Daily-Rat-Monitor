@@ -14,11 +14,12 @@ import {
   animations: [
     trigger('state', [
       state('show', style({
-        transform: 'translateX(0)'
-      })),
-      state('hide', style({
         transform: 'translateX(0%)'
       })),
+      state('hide', style({
+        transform: 'translateX(100%)'
+      })),
+      transition('* => *', animate(300))
     ])
   ]
 })

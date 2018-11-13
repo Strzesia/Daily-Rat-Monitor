@@ -15,7 +15,12 @@
     class="list"
   >
     <ul>
-      <li>
+
+      <li [routerLink]="['/start']" [routerLinkActive]="'active'">
+        <img src="../../../assets/start.png">
+      </li>
+
+      <li [routerLink]="['/pets']" [routerLinkActive]="'active'">
         <img src="../../../assets/rat.png">
       </li>
 
@@ -26,42 +31,7 @@
       <li>
         <img src="../../../assets/measurement.png">
       </li>
+      
     </ul>
   </div>
 </div>
-
-<!-- <div *ngIf="state === 'show'; else hide">
-  <i
-    [@state]="state"
-    (click)="toggleState()"
-    class="menu fa fa-bars fa-lg"
-  ></i>
-</div>
-
-<ng-template #hide>
-  <div class="hideMenu">
-  <i
-    (click)="toggleState()"
-    class="menu fa fa-times fa-lg"
-  ></i>
-
-  <div
-    [@state]="state"
-    class="list"
-  >
-    <ul>
-      <li>
-        <img src="../../../assets/rat.png">
-      </li>
-
-      <li>
-        <img src="../../../assets/scale.png">
-      </li>
-
-      <li>
-        <img src="../../../assets/measurement.png">
-      </li>
-    </ul>
-  </div>
-  </div>
-</ng-template> -->

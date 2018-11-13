@@ -1,8 +1,8 @@
-import { Rat } from './rat';
+import { Pet } from './pet';
 
 export interface Measurements {
     id: number;
-    rat: Rat;
+    pet: Pet;
     weight: number;
     date: Date;
 }

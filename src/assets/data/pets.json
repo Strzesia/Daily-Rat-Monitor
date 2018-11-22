@@ -1,0 +1,54 @@
+[
+
+    {
+        "id": 0,
+        "species": "rat",
+        "name": "Heniu",
+        "photo": null,
+        "age": [2017, 8, 23],
+        "weightHistory": [],
+        "coat": "husky",
+        "note": null
+    },
+    {
+        "id": 1,
+        "species": "rat",
+        "name": "Biszkopt",
+        "photo": null,
+        "age": [2017, 8, 25],
+        "weightHistory": [],
+        "coat": "siamese",
+        "note": null
+    },
+    {
+        "id": 2,
+        "species": "rat",
+        "name": "Rick",
+        "photo": null,
+        "age": [2017, 7, 1],
+        "weightHistory": [],
+        "coat": "placeholder",
+        "note": null
+    },
+    {
+        "id": 3,
+        "species": "rat",
+        "name": "Bombel",
+        "photo": null,
+        "age": [2017, 12, 1],
+        "weightHistory": [],
+        "coat": "placeholder",
+        "note": null
+    },
+    {
+        "id": 3,
+        "species": "rat",
+        "name": "Bond",
+        "photo": null,
+        "age": [2017, 12, 1],
+        "weightHistory": [],
+        "coat": "placeholder",
+        "note":  null
+    }
+
+]

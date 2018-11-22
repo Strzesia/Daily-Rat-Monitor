@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StartComponent } from './main/start/start.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PetsService } from './services/pets.service';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PetsService } from './services/pets.service';
     AngularFontAwesomeModule,
     PetsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModalModule
   ],
   providers: [PetsService],
   bootstrap: [AppComponent]

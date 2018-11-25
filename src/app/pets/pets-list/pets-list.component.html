@@ -1,54 +1,7 @@
 <div class="container">
   <div class="content">
-      
-    <!-- <div class="pet-form">
-
-      <button *ngIf="state === 'hide'; else show" (click)="toggleState()" >add pet</button>
-
-      <ng-template #show>
-        <button (click)="toggleState()">hide</button>
-      </ng-template>
-        
-      <form [@state]='state' [formGroup]="petForm">
-        <div>
-          <label>species</label>
-          <input formControlName='species'>
-        </div>
-
-        <div>
-          <label>name</label>
-          <input formControlName='name'>
-        </div>
-
-        <div>
-          <label>photo</label>
-          <input formControlName='photo'>
-        </div>
-
-        <div>
-          <label>weight</label>
-          <input formControlName='weight'>
-        </div>
-
-        <div>
-          <label>date of birth</label>
-          <input formControlName='age'>
-        </div>
-
-        <div>
-          <label>coat</label>
-          <input formControlName='coat'>
-        </div>
-
-        <div>
-          <label>note</label>
-          <input formControlName='note'>
-        </div>
-      </form>
-    
-    </div> -->
-
-    <ng-template #modal let-modal>
+<!--       
+  <ng-template #modal>
       <div class="modal-header">
         <h3 class="modal-title">Add pet</h3>
         <button class="close" type="button" aria-label="Close" (click)='modal.dismiss("Cross click")'>
@@ -56,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <form [@state]='state' [formGroup]="petForm">
+          <form [formGroup]="petForm">
               <div>
                 <label>species</label>
                 <input formControlName='species'>
@@ -96,9 +49,12 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
       </div>
-    </ng-template>
+  </ng-template>
 
-    <button class="btn btn-lg btn-outline-primary" (click)="open(modal)">Add pet</button>
+  <button class="btn btn-lg btn-outline-primary" (click)="open(modal)">Add pet</button>
+ -->
+
+ <button (click)="openFormModal()">Open Modal</button>
 
     <div class="pets">
       <app-pet class='pet' *ngFor='let pet of pets' [pet]='pet'></app-pet>

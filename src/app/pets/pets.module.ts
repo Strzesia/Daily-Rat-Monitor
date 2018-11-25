@@ -5,14 +5,19 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PetComponent } from './pet/pet.component';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddPetModalComponent } from './add-pet-modal/add-pet-modal.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   exports: [PetsListComponent],
-  declarations: [PetsListComponent, PetComponent, PetDetailsComponent]
+  declarations: [PetsListComponent, PetComponent, PetDetailsComponent, AddPetModalComponent],
+  entryComponents: [ AddPetModalComponent ]
 })
 export class PetsModule { }

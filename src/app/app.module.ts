@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StartComponent } from './main/start/start.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PetsService } from './services/pets.service';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     PetsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModalModule
+    NgbModule
   ],
   providers: [PetsService],
   bootstrap: [AppComponent]

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { AddPetModalComponent } from '../add-pet-modal/add-pet-modal.component';
 import { Pet } from '../../models/pet';
 import {
   trigger,
@@ -32,33 +31,52 @@ export class PetsListComponent implements OnInit {
 
   petForm: FormGroup;
   pets: Pet[];
+  closeResult: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private petService: PetsService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
   ) { }
 
-  open(modal) {
-     this.modalService.open(modal)
+  openFormModal() {
+    const modalRef = this.modalService.open(AddPetModalComponent);
+    
+    modalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
   }
+
+  // open(modal) {
+  //    this.modalService.open(modal, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  //     this.closeResult = `Closed with: ${result}`;
+  //   }, (reason) => {
+  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+  //   });
+  // }
+
+  // private getDismissReason(reason: any): string {
+  //   if (reason === ModalDismissReasons.ESC) {
+  //     return 'by pressing ESC';
+  //   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+  //     return 'by clicking on a backdrop';
+  //   } else {
+  //     return  `with: ${reason}`;
+  //   }
+  // }
 
   ngOnInit() {
     this.petForm = this.buildPetForm();
     this.getData();
   }
 
-  state = 'hide';
-
-  toggleState() {
-    this.state = this.state === 'show' ? 'hide' : 'show';
-  }
-
   getData(): void {
     this.petService.getPets()
     .subscribe((pets) => {
       this.pets = pets;
-      console.log(pets)
+      //console.log(pets)
     });
   }
 
